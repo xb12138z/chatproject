@@ -43,11 +43,11 @@ service StatusService {
 	rpc Login(LoginReq) returns(LoginRsp);
 }
 
-message AddFriendReq {
-	int32  applyuid = 1;
+message AddFriendReq{
+	int32 applyuid = 1;
 	string name = 2;
 	string desc = 3;
-	int32  touid = 4;
+	int32 touid = 4;
 }
 
 message AddFriendRsp {
@@ -62,22 +62,22 @@ message RplyFriendReq {
 	int32 touid = 3;
 }
 
-message RplyFriendRsp {
+message RplyFriendRsp{
 	int32 error = 1;
 	int32 rplyuid = 2;
 	int32 touid = 3;
 }
 
 message SendChatMsgReq{
-		int32 fromuid = 1;
-		int32 touid = 2;
-		string message = 3;
+	int32 fromuid = 1;
+	int32 touid = 2;
+	string message = 3;
 }
 
 message SendChatMsgRsp{
-		int32 error = 1;
-		int32 fromuid = 2;
-		int32 touid = 3;
+	int32 error = 1;
+	int32 fromuid = 2;
+	int32 touid = 3;
 }
 
 message AuthFriendReq{
@@ -86,14 +86,14 @@ message AuthFriendReq{
 }
 
 message AuthFriendRsp{
-	int32 error = 1;
+	int32 error =1;
 	int32 fromuid = 2;
-	int32 touid = 3;
+	int32 touid =3;
 }
 
-message TextChatMsgReq {
-	int32 fromuid = 1;
-    int32 touid = 2;
+message TextChatMsgReq{
+	int32 fromuid =1;
+	int32 touid = 2;
 	repeated TextChatData textmsgs = 3;
 }
 

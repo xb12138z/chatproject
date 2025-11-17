@@ -52,5 +52,11 @@ public:
 private:
     std::function<void()> func_;
 };
+
+#define USERIPPREFIX  "uip_"
+#define USERTOKENPREFIX  "utoken_"
+#define IPCOUNTPREFIX  "ipcount_"
+#define USER_BASE_INFO "ubaseinfo_"
+#define LOGIN_COUNT  "logincount"
 //class ConfigMgr;//不需要扩展为单例后删除
 //extern ConfigMgr gCfgMgr;

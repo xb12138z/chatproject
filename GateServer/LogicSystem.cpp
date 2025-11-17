@@ -240,10 +240,11 @@ LogicSystem::LogicSystem() {
 
 		std::cout << "succeed to load userinfo uid is " << userInfo.uid << std::endl;
 		root["error"] = 0;
-		root["user"] = name;
+		root["email"] = name;
 		root["uid"] = userInfo.uid;
 		root["token"] = reply.token();
 		root["host"] = reply.host();
+		root["port"] = reply.port();
 		std::string jsonstr = root.toStyledString();
 		beast::ostream(connection->_response.body()) << jsonstr;
 		return true;

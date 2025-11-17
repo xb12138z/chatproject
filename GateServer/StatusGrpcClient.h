@@ -24,7 +24,7 @@ public:
 		for (size_t i = 0; i < poolSize_; ++i) {
 
 			std::shared_ptr<Channel> channel = grpc::CreateChannel(host + ":" + port,
-				grpc::InsecureChannelCredentials());
+				grpc::InsecureChannelCredentials());//创建一个grpc通信通道
 
 			connections_.push(StatusService::NewStub(channel));
 		}
