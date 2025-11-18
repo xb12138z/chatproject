@@ -384,7 +384,7 @@ std::shared_ptr<UserInfo> MysqlDao::GetUser(std::string name)
 			//user_ptr->nick = res->getString("nick");
 			//user_ptr->desc = res->getString("desc");
 			//user_ptr->sex = res->getInt("sex");
-			//user_ptr->uid = res->getInt("uid");
+			user_ptr->uid = res->getInt("uid");
 			break;
 		}
 		return user_ptr;
